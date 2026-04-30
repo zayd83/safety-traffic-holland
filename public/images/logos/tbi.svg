@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 60" width="160" height="60">
+  <rect width="160" height="60" fill="none"/>
+  <rect x="0" y="10" width="52" height="40" rx="4" fill="#005B94"/>
+  <text x="26" y="37" font-family="Arial Black, Arial, sans-serif" font-size="18" font-weight="900" fill="white" text-anchor="middle" letter-spacing="1">TBI</text>
+  <text x="62" y="28" font-family="Arial, sans-serif" font-size="11" font-weight="700" fill="#333">TBI</text>
+  <text x="62" y="44" font-family="Arial, sans-serif" font-size="11" font-weight="400" fill="#666">Infra</text>
+</svg>
