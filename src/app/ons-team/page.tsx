@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
@@ -11,54 +11,54 @@ import Footer from "@/components/layout/Footer";
 const teamMembers = [
   {
     photo: "/images/A7402006.jpg",
-    name: "Ahmed El Fassi",
+    name: "Redouane",
+    function: "Eigenaar",
+    experience: "Oprichter",
+    quote:
+      "Ik heb Safety Traffic Holland opgericht omdat ik geloofde dat verkeersbegeleiding anders kon — persoonlijker, betrouwbaarder en met echte aandacht voor de mensen in het veld.",
+    story:
+      "Redouane begon Safety Traffic Holland vanuit een duidelijke visie: een bedrijf bouwen waar kwaliteit en menselijkheid centraal staan. Wat klein begon groeide uit tot een landelijk opererende organisatie met een vast team van VCA-gecertificeerde verkeersregelaars. Hij is dagelijks betrokken bij de operatie en kent zijn mensen persoonlijk.",
+    highlight:
+      "Het succes van STH zit in de mensen. Als je goed zorgt voor je team, zorgt je team goed voor de klant — zo simpel is het.",
+  },
+  {
+    photo: "/images/Medewerker1.jpg",
+    name: "Dario Balde",
+    function: "Verkeersregelaar",
+    experience: "1 jaar in dienst",
+    quote:
+      "Ik had nooit gedacht dat ik zo snel zou groeien in dit vak. De begeleiding hier is echt anders dan wat ik gewend was.",
+    story:
+      "Dario stapte in bij Safety Traffic Holland zonder specifieke achtergrond in verkeersbegeleiding. Met de juiste training en ondersteuning vanuit het team stond hij al snel zelfstandig op complexe locaties. Hij werkt voornamelijk in stedelijk gebied en staat bekend om zijn kalme aanpak in drukke situaties.",
+    highlight:
+      "Je wordt hier echt klaargestoomd. Niemand wordt zomaar de weg op gestuurd — er is altijd iemand die meekijkt en je helpt groeien.",
+  },
+  {
+    photo: "/images/A7401952.jpg",
+    name: "Younes El Harrak",
     function: "Senior Verkeersregelaar",
-    experience: "4 jaar in dienst",
-    quote:
-      "Je staat elke dag tussen het verkeer en de mensen die veilig willen werken. Dat gevoel van verantwoordelijkheid — dat geeft energie.",
-    story:
-      "Ahmed begon bij Safety Traffic Holland zonder ervaring in de sector. Binnen een jaar groeide hij uit tot een van de meest gevraagde verkeersregelaars voor complexe wegwerkzaamheden. Hij werkte aan projecten bij Schiphol, de A2 en diverse gemeentelijke projecten door heel Nederland.",
-    highlight:
-      "De vaste gezichten in het team. Je kent elkaar, je vertrouwt elkaar — dat merk je direct op de werkvloer.",
-  },
-  {
-    photo: "/images/A7401959.jpg",
-    name: "Kevin de Groot",
-    function: "Verkeersregelaar Evenementen",
-    experience: "2 jaar in dienst",
-    quote:
-      "Bij een evenement met 50.000 bezoekers moet alles kloppen. Die druk maakt het juist uitdagend en leuk.",
-    story:
-      "Kevin werkte eerder in de beveiliging maar zocht meer variatie en verantwoordelijkheid. Bij Safety Traffic Holland vond hij precies dat. Hij is gespecialiseerd in grote publieksevenementen en werkte onder andere bij de Rotterdam Marathon en meerdere festivals.",
-    highlight:
-      "Elke dag is anders. De ene dag sta je bij wegwerkzaamheden, de andere dag bij een groot evenement. Nooit saai.",
-  },
-  {
-    photo: "https://placehold.co/600x700/1A1A2E/ffffff?text=Foto+volgt",
-    name: "Fatima Ouali",
-    function: "Verkeersregelaar & Teamcoach",
     experience: "3 jaar in dienst",
     quote:
-      "Ik ben hier begonnen als verkeersregelaar en ben nu ook verantwoordelijk voor het inwerken van nieuwe collega's. Die groei had ik niet verwacht.",
+      "Als je samenwerkt zoals wij dat doen, merk je het direct op de werkvloer. Geen gedoe, gewoon vertrouwen in elkaar.",
     story:
-      "Fatima stapte over vanuit de detailhandel en was in eerste instantie sceptisch over werken in het verkeer. Maar de professionele begeleiding en het sterke teamgevoel bij Safety Traffic Holland overtuigden haar al snel. Nu is ze zelf degene die nieuwe collega's wegwijs maakt.",
+      "Younes werkt al drie jaar bij Safety Traffic Holland en heeft in die tijd aan tientallen projecten meegewerkt, van gemeentelijke wegwerkzaamheden tot grootschalige evenementen. Hij is een vaste kracht in het team en wordt regelmatig ingezet op opdrachten die coördinatie en ervaring vereisen.",
     highlight:
-      "Safety Traffic Holland investeert echt in je. Je wordt niet zomaar de weg op gestuurd — je wordt klaargestoomd.",
+      "De sfeer in het team is wat mij hier houdt. We werken hard, maar we lachen ook veel. Dat maakt het verschil.",
   },
 ];
 
 // ─── Animation variants ───────────────────────────────────────────────────────
 
-const fadeUp = {
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 32 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] },
+    transition: { duration: 0.6, ease: "easeOut" },
   },
 };
 
-const stagger = {
+const stagger: Variants = {
   visible: { transition: { staggerChildren: 0.15 } },
 };
 
@@ -189,7 +189,7 @@ export default function OnsTeamPage() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
             >
               {/* Badge */}
               <div
@@ -251,7 +251,7 @@ export default function OnsTeamPage() {
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
             >
               <h2
                 className="text-3xl sm:text-4xl font-extrabold text-white mb-4"

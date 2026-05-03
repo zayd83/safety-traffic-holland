@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import {
@@ -66,12 +66,12 @@ const aanvraagTypes = [
   "Overig",
 ];
 
-const fadeUp = {
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 24 },
   visible: (i: number) => ({
     opacity: 1,
     y: 0,
-    transition: { duration: 0.5, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] },
+    transition: { duration: 0.5, delay: i * 0.08, ease: "easeOut" as const },
   }),
 };
 
@@ -177,7 +177,7 @@ export default function ContactPage() {
               <motion.div
                 initial={{ opacity: 0, x: -24 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+                transition={{ duration: 0.6, ease: "easeOut" as const }}
               >
                 <h2
                   className="font-bold mb-2"
@@ -195,7 +195,7 @@ export default function ContactPage() {
                       key={item.label}
                       initial={{ opacity: 0, y: 12 }}
                       animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.4, delay: 0.3 + i * 0.07, ease: [0.22, 1, 0.36, 1] }}
+                      transition={{ duration: 0.4, delay: 0.3 + i * 0.07, ease: "easeOut" as const }}
                     >
                       {item.href ? (
                         <a
@@ -272,7 +272,7 @@ export default function ContactPage() {
               <motion.div
                 initial={{ opacity: 0, x: 24 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
+                transition={{ duration: 0.6, delay: 0.15, ease: "easeOut" as const }}
               >
                 <div
                   className="rounded-2xl p-8"

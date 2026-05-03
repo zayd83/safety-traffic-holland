@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { IconShield, IconCheck, IconArrowRight } from "@/components/ui/icons";
@@ -58,12 +58,12 @@ const diensten = [
   },
 ];
 
-const fadeUp = {
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 24 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] },
+    transition: { duration: 0.55, ease: "easeOut" },
   },
 };
 
@@ -158,7 +158,7 @@ export default function DienstenPage() {
                 initial={{ opacity: 0, x: dienst.flip ? 32 : -32 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
                 className="relative"
               >
                 <div
@@ -185,7 +185,7 @@ export default function DienstenPage() {
                 initial={{ opacity: 0, x: dienst.flip ? -32 : 32 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+                transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
               >
                 <span
                   className="inline-block text-xs font-semibold tracking-widest uppercase mb-3 px-3 py-1 rounded-full"
