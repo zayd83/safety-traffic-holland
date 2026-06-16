@@ -4,7 +4,6 @@ import { IconPhone, IconMail, IconWhatsApp } from "@/components/ui/icons";
 
 const navLinks = [
   { label: "Home",      href: "/" },
-  { label: "Over ons",  href: "/over-ons" },
   { label: "Diensten",  href: "/diensten" },
   { label: "Vacatures", href: "/vacatures" },
   { label: "Contact",   href: "/contact" },
