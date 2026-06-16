@@ -154,7 +154,7 @@ export default function OverOnsPage() {
                 style={{ height: "380px", boxShadow: "0 24px 60px rgba(27,111,190,0.15), 0 4px 16px rgba(0,0,0,0.1)" }}
               >
                 <Image
-                  src="/images/A7402006.jpg"
+                  src="/images/A7401984.jpg"
                   alt="Safety Traffic Holland verkeersregelaar"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"

@@ -17,31 +17,31 @@ const voordelen = [
   {
     icon: <IconShield className="w-6 h-6" />,
     title: "VCA-certificering vergoed",
-    desc: "Wij vergoeden uw VCA-opleiding volledig. U investeert in uw carrière, wij investeren in u.",
+    desc: "Wij vergoeden jouw VCA-opleiding volledig. Jij investeert in jouw carrière, wij investeren in jou.",
   },
   {
     icon: <IconUsers className="w-6 h-6" />,
     title: "Vast team",
-    desc: "U werkt in een hecht team met ervaren collega's. Geen roulerende ploegen — vaste gezichten.",
+    desc: "Je werkt in een hecht team met ervaren collega's. Geen roulerende ploegen — vaste gezichten.",
   },
   {
     icon: <IconClock className="w-6 h-6" />,
     title: "Flexibele roosters",
-    desc: "Dag-, avond- en weekenddiensten mogelijk. We stemmen het rooster af op uw beschikbaarheid.",
+    desc: "Dag-, avond- en weekenddiensten mogelijk. We stemmen het rooster af op jouw beschikbaarheid.",
   },
   {
     icon: <IconArrowRight className="w-6 h-6" />,
     title: "Doorgroeimogelijkheden",
-    desc: "Van verkeersregelaar naar ploegcoördinator of projectleider. Uw ambitie bepaalt uw pad.",
+    desc: "Van verkeersregelaar naar ploegcoördinator. Jouw ambitie bepaalt jouw pad.",
   },
 ];
 
 const profiel = [
-  "U heeft een geldig rijbewijs B",
-  "U bent communicatief vaardig en stressbestendig",
-  "U bent bereid om VCA-certificering te behalen",
-  "U bent beschikbaar voor dag- en/of avonddiensten",
-  "U spreekt Nederlands",
+  "Je beschikt over een geldig rijbewijs B",
+  "Je bent communicatief vaardig en stressbestendig",
+  "Je bent flexibel inzetbaar voor dag-, avond- en weekenddiensten",
+  "Je beheerst de Nederlandse taal",
+  "Je werkt graag buiten en neemt verantwoordelijkheid",
   "Ervaring als verkeersregelaar is een pré, geen vereiste",
 ];
 
@@ -223,7 +223,7 @@ export default function VacaturesPage() {
                 Herken jij jezelf hierin?
               </h2>
               <p className="mb-6" style={{ color: "#6b7280", lineHeight: 1.8 }}>
-                We zoeken enthousiaste mensen die oog hebben voor veiligheid en graag buiten werken. Ervaring is geen vereiste — wij investeren in uw opleiding.
+                Wij zoeken enthousiaste mensen die verantwoordelijkheidsgevoel hebben, veiligheid belangrijk vinden en graag buiten werken. Ervaring is mooi meegenomen, maar geen vereiste. Wij bieden de juiste begeleiding en opleidingsmogelijkheden.
               </p>
               <ul className="space-y-3">
                 {profiel.map((item) => (
@@ -263,7 +263,7 @@ export default function VacaturesPage() {
                       Sollicitatie ontvangen!
                     </h3>
                     <p style={{ color: "#6b7280", lineHeight: 1.7 }}>
-                      Bedankt voor uw interesse. We nemen zo snel mogelijk contact met u op.
+                      Bedankt voor je interesse. We nemen zo snel mogelijk contact met je op.
                     </p>
                     <button
                       onClick={() => { setSubmitted(false); setForm({ naam: "", email: "", telefoon: "", motivatie: "", hoeGevonden: "Selecteer een optie" }); }}
@@ -349,7 +349,7 @@ export default function VacaturesPage() {
                         </label>
                         <textarea
                           rows={4}
-                          placeholder="Vertel ons waarom u bij Safety Traffic Holland wilt werken..."
+                          placeholder="Vertel ons waarom je bij Safety Traffic Holland wilt werken..."
                           value={form.motivatie}
                           onChange={(e) => setForm({ ...form, motivatie: e.target.value })}
                           style={{ ...inputStyle("motivatie"), resize: "vertical" }}

@@ -6,7 +6,6 @@ import { useState } from "react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { ContainerScroll, BentoGrid, BentoCell, ContainerScale } from "@/components/blocks/hero-gallery-scroll-animation";
-import { Testimonial } from "@/components/ui/testimonial-card";
 import CarouselCard from "@/components/ui/carousel-card-1";
 import { InfiniteSlider } from "@/components/ui/infinite-slider";
 import { motion } from "framer-motion";
@@ -42,45 +41,40 @@ const usps = [
   { icon: <IconShield className="w-7 h-7" />, title: "VCA-gecertificeerd", desc: "Onze verkeersregelaars zijn volledig VCA-gecertificeerd en werken volgens de geldende veiligheidsnormen." },
   { icon: <IconUsers className="w-7 h-7" />, title: "Vaste verkeersregelaars", desc: "U werkt altijd met ervaren, vaste medewerkers die de procedures kennen en professioneel optreden." },
   { icon: <IconMap className="w-7 h-7" />, title: "Heel Nederland", desc: "Wij zijn actief in het hele land en kunnen snel worden ingezet, van de Randstad tot de regio's." },
-  { icon: <IconClock className="w-7 h-7" />, title: "24/7 bereikbaar", desc: "Dag en nacht bereikbaar voor planning, vragen of spoedopdrachten. Altijd iemand aan de lijn." },
+  { icon: <IconClock className="w-7 h-7" />, title: "24/7 bereikbaar", desc: "Ook buiten reguliere werktijden staan wij klaar voor vragen, planning en spoedinzetten." },
 ];
 
 const steps = [
   {
     num: "01",
     title: "Aanvraag",
-    desc: "Neem contact op via het formulier, telefoon of WhatsApp. We reageren snel en denken direct mee.",
+    desc: "Neem contact op via telefoon, WhatsApp of het contactformulier.",
     icon: <IconPhone className="w-6 h-6" />,
     color: "#1B6FBE",
   },
   {
     num: "02",
     title: "Afstemming",
-    desc: "We bespreken locatie, tijdstip en aantal verkeersregelaars. U ontvangt een heldere offerte.",
+    desc: "We bespreken de werkzaamheden, planning en benodigde inzet.",
     icon: <IconUsers className="w-6 h-6" />,
     color: "#1B6FBE",
   },
   {
     num: "03",
     title: "Inzet",
-    desc: "Onze gecertificeerde verkeersregelaars staan op de afgesproken plek. Altijd op tijd, altijd professioneel.",
+    desc: "Onze gecertificeerde verkeersregelaars worden volgens afspraak ingezet.",
     icon: <IconShield className="w-6 h-6" />,
     color: "#F5A623",
   },
   {
     num: "04",
-    title: "Evaluatie",
-    desc: "Na afloop evalueren we de inzet voor continue verbetering. Uw feedback maakt ons beter.",
+    title: "Afronding",
+    desc: "Indien gewenst evalueren we de inzet na afloop van de opdracht.",
     icon: <IconCheck className="w-6 h-6" />,
     color: "#F5A623",
   },
 ];
 
-const testimonials = [
-  { name: "Johan de Vries", role: "Projectleider Infrastructuur", company: "BAM Infra Nederland", rating: 5, image: "https://i.pravatar.cc/150?u=johan", testimonial: "Safety Traffic Holland heeft meerdere van onze wegwerkzaamheden begeleid. Altijd op tijd, professioneel en de verkeersregelaars kennen hun vak. Wij werken met plezier samen." },
-  { name: "Anita van den Berg", role: "Coördinator Openbare Ruimte", company: "Gemeente Rotterdam", rating: 5, image: "https://i.pravatar.cc/150?u=anita", testimonial: "Betrouwbare partner voor verkeersafzettingen bij gemeentelijke projecten. Snelle communicatie en VCA-gecertificeerd personeel geeft ons het vertrouwen dat alles veilig verloopt." },
-  { name: "Mark Kooistra", role: "Uitvoerder Wegenbouw", company: "Heijmans Infra", rating: 5, image: "https://i.pravatar.cc/150?u=mark", testimonial: "24/7 bereikbaar en altijd flexibel inzetbaar. Bij spoedopdrachten staan zij direct klaar. De samenwerking verloopt soepel en de kwaliteit is consistent hoog." },
-];
 
 const projectCards = [
   { id: 1, imgUrl: "/images/A7401968.jpg", content: "Wegwerkzaamheden A2 — Volledige verkeersafzetting en begeleiding bij asfaltrenovatie op de A2. Dag- en nachtdiensten voor minimale doorstromingshinder." },
@@ -88,7 +82,6 @@ const projectCards = [
   { id: 3, imgUrl: "/images/A7402014.jpg", content: "Evenementenbegeleiding Rotterdam Marathon — Complete verkeersafhandeling voor 45.000 deelnemers. Coördinatie met gemeente, politie en hulpdiensten." },
   { id: 4, imgUrl: "/images/A7401952.jpg", content: "Calamiteitenbeheer snelweg — Spoedinzet na incident op de ring Amsterdam. Binnen 30 minuten ter plaatse voor veiligstelling van de rijbaan." },
   { id: 5, imgUrl: "/images/A7401975.jpg", content: "Bouwplaatsbegeleiding Schiphol — Langdurig project met dagelijkse verkeersregelaars voor bouwverkeer en veiligheid rondom uitbreiding luchthaven." },
-  { id: 6, imgUrl: "/images/A7402052.jpg", content: "Gemeentelijk onderhoud Den Haag — Structurele samenwerking voor wekelijkse wegwerkzaamheden. Vaste verkeersregelaars die de omgeving en procedures kennen." },
 ];
 
 const clients = [
@@ -144,7 +137,7 @@ export default function Home() {
         >
           <BentoGrid className="sticky left-0 top-0 z-0 h-screen w-full p-2 md:p-4" style={{ background: "linear-gradient(160deg, #0d1b2e 0%, #1A1A2E 50%, #0f2744 100%)" }}>
             {[
-              { src: "/images/A7402006.jpg", alt: "Verkeersregelaar aan het werk" },
+              { src: "/images/A7401984.jpg", alt: "Verkeersregelaar aan het werk" },
               { src: "/images/A7401932.jpg", alt: "Wegwerkzaamheden" },
               { src: "/images/A7401967.jpg", alt: "Evenementenbegeleiding" },
               { src: "/images/A7401998.jpg", alt: "Calamiteitenbeheer" },
@@ -294,10 +287,10 @@ export default function Home() {
             <div className="text-center mb-16 md:mb-20">
               <div className="inline-block px-3 py-1 rounded-full text-xs font-semibold mb-4 border" style={{ backgroundColor: "rgba(27,111,190,0.2)", color: "#93c5fd", borderColor: "rgba(27,111,190,0.3)" }}>Onze werkwijze</div>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4" style={{ letterSpacing: "-0.03em" }}>
-                Zo werkt het
+                Van aanvraag tot inzet
               </h2>
               <p className="text-base max-w-xl mx-auto" style={{ color: "rgba(255,255,255,0.5)", lineHeight: "1.75" }}>
-                Duidelijke stappen, geen verrassingen. Van eerste contact tot succesvolle uitvoering.
+                Duidelijke communicatie, korte lijnen en een professionele aanpak.
               </p>
             </div>
 
@@ -386,20 +379,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ── TESTIMONIALS ── */}
-        <section className="py-20 md:py-28 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <div className="inline-block px-3 py-1 rounded-full text-xs font-semibold mb-3 text-white" style={{ backgroundColor: "#1B6FBE" }}>Ervaringen</div>
-              <h2 className="text-3xl sm:text-4xl font-extrabold mb-4" style={{ color: "#1A1A2E", letterSpacing: "-0.02em" }}>Wat onze opdrachtgevers zeggen</h2>
-              <p className="text-base text-gray-500 max-w-xl mx-auto" style={{ lineHeight: "1.75" }}>Wij werken voor gemeentes, aannemers en evenementenorganisatoren door heel Nederland. Dit zeggen zij over onze samenwerking.</p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {testimonials.map((t) => <Testimonial key={t.name} {...t} />)}
-            </div>
-          </div>
-        </section>
-
         {/* ── SPLIT CTA ── */}
         <section className="py-20 md:py-28 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -408,9 +387,9 @@ export default function Home() {
                 <div>
                   <div className="inline-block px-3 py-1 rounded-full text-xs font-semibold mb-4 bg-white/20 text-white">Voor opdrachtgevers</div>
                   <h3 className="text-2xl sm:text-3xl font-extrabold text-white mb-3" style={{ letterSpacing: "-0.02em" }}>Verkeersbegeleiding nodig?</h3>
-                  <p className="text-white/75 text-sm mb-6" style={{ lineHeight: "1.75" }}>Vraag vandaag nog een vrijblijvende offerte aan. Wij reageren snel en denken mee over de beste oplossing voor uw situatie.</p>
+                  <p className="text-white/75 text-sm mb-6" style={{ lineHeight: "1.75" }}>Vraag vandaag nog vrijblijvend een offerte aan. Wij denken mee over een veilige en efficiënte inzet voor uw project.</p>
                   <ul className="flex flex-col gap-2 mb-8">
-                    {["Snel geschakeld", "Transparante prijzen", "VCA-gecertificeerd personeel"].map((item) => (
+                    {["Kwaliteit staat voorop", "VCA* gecertificeerde organisatie", "Ervaren en gecertificeerde verkeersregelaars"].map((item) => (
                       <li key={item} className="flex items-center gap-2 text-sm text-white/85 font-medium">
                         <IconCheck className="w-4 h-4 shrink-0 text-yellow-300" />
                         {item}
@@ -435,7 +414,7 @@ export default function Home() {
                   <h3 className="text-2xl sm:text-3xl font-extrabold text-white mb-3" style={{ letterSpacing: "-0.02em" }}>Word verkeersregelaar</h3>
                   <p className="text-white/75 text-sm mb-6" style={{ lineHeight: "1.75" }}>Wij zijn op zoek naar gemotiveerde mensen die willen werken als verkeersregelaar. Geen ervaring nodig — wij verzorgen de volledige opleiding.</p>
                   <ul className="flex flex-col gap-2 mb-8">
-                    {["Flexibele werktijden", "Volledige opleiding vergoed", "Landelijke inzet mogelijk"].map((item) => (
+                    {["Flexibele werktijden", "Volledige opleiding vergoed", "Actief in Midden- en Zuidwest-Nederland"].map((item) => (
                       <li key={item} className="flex items-center gap-2 text-sm text-white/85 font-medium">
                         <IconCheck className="w-4 h-4 shrink-0" style={{ color: "#F5A623" }} />
                         {item}
