@@ -17,6 +17,14 @@ const contactInfo = [
   {
     icon: <IconPhone className="w-5 h-5" />,
     label: "Telefoon",
+    value: "+31 6 23 56 05 81",
+    href: "tel:+31623560581",
+    color: "#1B6FBE",
+    bg: "rgba(27,111,190,0.12)",
+  },
+  {
+    icon: <IconPhone className="w-5 h-5" />,
+    label: "Telefoon",
     value: "+31 6 41 03 93 93",
     href: "tel:+31641039393",
     color: "#1B6FBE",

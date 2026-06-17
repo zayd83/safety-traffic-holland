@@ -71,6 +71,20 @@ export default function Footer() {
             <ul className="flex flex-col gap-3">
               <li>
                 <a
+                  href="tel:+31623560581"
+                  className="flex items-center gap-3 text-sm group focus-visible:outline-none focus-visible:underline"
+                  style={{ color: "rgba(255,255,255,0.55)", transition: "color 0.2s ease" }}
+                  onMouseEnter={(e) => (e.currentTarget.style.color = "#ffffff")}
+                  onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(255,255,255,0.55)")}
+                >
+                  <span className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0" style={{ backgroundColor: "rgba(27,111,190,0.25)" }}>
+                    <IconPhone className="w-4 h-4" style={{ color: "#1B6FBE" }} />
+                  </span>
+                  +31 6 23 56 05 81
+                </a>
+              </li>
+              <li>
+                <a
                   href="tel:+31641039393"
                   className="flex items-center gap-3 text-sm group focus-visible:outline-none focus-visible:underline"
                   style={{ color: "rgba(255,255,255,0.55)", transition: "color 0.2s ease" }}
