@@ -135,9 +135,15 @@ export default function Footer() {
           <p className="text-xs" style={{ color: "rgba(255,255,255,0.35)" }}>
             © {new Date().getFullYear()} Safety Traffic Holland B.V. Alle rechten voorbehouden.
           </p>
-          <p className="text-xs" style={{ color: "rgba(255,255,255,0.35)" }}>
-            KvK-inschrijving Nederland
-          </p>
+          <div className="flex items-center gap-4">
+            <Link href="/privacybeleid" className="text-xs hover:text-white focus-visible:outline-none focus-visible:underline" style={{ color: "rgba(255,255,255,0.35)", transition: "color 0.2s ease" }} onMouseEnter={(e) => (e.currentTarget.style.color = "#ffffff")} onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(255,255,255,0.35)")}>
+              Privacybeleid
+            </Link>
+            <span className="text-xs" style={{ color: "rgba(255,255,255,0.15)" }}>·</span>
+            <Link href="/algemene-voorwaarden" className="text-xs hover:text-white focus-visible:outline-none focus-visible:underline" style={{ color: "rgba(255,255,255,0.35)", transition: "color 0.2s ease" }} onMouseEnter={(e) => (e.currentTarget.style.color = "#ffffff")} onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(255,255,255,0.35)")}>
+              Algemene voorwaarden
+            </Link>
+          </div>
         </div>
       </div>
     </footer>
