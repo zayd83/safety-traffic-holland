@@ -271,7 +271,7 @@ export default function DienstenPage() {
                 <IconArrowRight className="w-4 h-4" />
               </Link>
               <a
-                href="tel:+31641039393"
+                href="tel:+31623560581"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm"
                 style={{
                   backgroundColor: "rgba(255,255,255,0.08)",
@@ -282,7 +282,7 @@ export default function DienstenPage() {
                 onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = "rgba(255,255,255,0.14)"; }}
                 onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = "rgba(255,255,255,0.08)"; }}
               >
-                +31 6 41 03 93 93
+                +31 6 23 56 05 81
               </a>
             </div>
           </div>

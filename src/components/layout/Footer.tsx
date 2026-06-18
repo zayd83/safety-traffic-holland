@@ -34,7 +34,7 @@ export default function Footer() {
               Professionele verkeersbegeleiding door heel Nederland. VCA-gecertificeerd en 24/7 bereikbaar.
             </p>
             <a
-              href="https://wa.me/31641039393"
+              href="https://wa.me/31623560581"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold transition-[opacity,transform] hover:opacity-90 active:translate-y-px focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-400"
@@ -85,20 +85,6 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="tel:+31641039393"
-                  className="flex items-center gap-3 text-sm group focus-visible:outline-none focus-visible:underline"
-                  style={{ color: "rgba(255,255,255,0.55)", transition: "color 0.2s ease" }}
-                  onMouseEnter={(e) => (e.currentTarget.style.color = "#ffffff")}
-                  onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(255,255,255,0.55)")}
-                >
-                  <span className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0" style={{ backgroundColor: "rgba(27,111,190,0.25)" }}>
-                    <IconPhone className="w-4 h-4" style={{ color: "#1B6FBE" }} />
-                  </span>
-                  +31 6 41 03 93 93
-                </a>
-              </li>
-              <li>
-                <a
                   href="mailto:info@safetytrafficholland.nl"
                   className="flex items-center gap-3 text-sm group focus-visible:outline-none focus-visible:underline"
                   style={{ color: "rgba(255,255,255,0.55)", transition: "color 0.2s ease" }}
@@ -113,7 +99,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://wa.me/31641039393"
+                  href="https://wa.me/31623560581"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 text-sm group focus-visible:outline-none focus-visible:underline"
@@ -124,7 +110,7 @@ export default function Footer() {
                   <span className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0" style={{ backgroundColor: "rgba(37,211,102,0.2)" }}>
                     <IconWhatsApp className="w-4 h-4" style={{ color: "#25D366" }} />
                   </span>
-                  WhatsApp: +31 6 41 03 93 93
+                  WhatsApp: +31 6 23 56 05 81
                 </a>
               </li>
             </ul>

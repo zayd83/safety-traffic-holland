@@ -23,14 +23,6 @@ const contactInfo = [
     bg: "rgba(27,111,190,0.12)",
   },
   {
-    icon: <IconPhone className="w-5 h-5" />,
-    label: "Telefoon",
-    value: "+31 6 41 03 93 93",
-    href: "tel:+31641039393",
-    color: "#1B6FBE",
-    bg: "rgba(27,111,190,0.12)",
-  },
-  {
     icon: <IconMail className="w-5 h-5" />,
     label: "E-mail",
     value: "info@safetytrafficholland.nl",
@@ -41,8 +33,8 @@ const contactInfo = [
   {
     icon: <IconWhatsApp className="w-5 h-5" />,
     label: "WhatsApp",
-    value: "+31 6 41 03 93 93",
-    href: "https://wa.me/31641039393",
+    value: "+31 6 23 56 05 81",
+    href: "https://wa.me/31623560581",
     color: "#25D366",
     bg: "rgba(37,211,102,0.12)",
   },
@@ -255,7 +247,7 @@ export default function ContactPage() {
                 {/* WhatsApp CTA */}
                 <div className="mt-8">
                   <a
-                    href="https://wa.me/31641039393"
+                    href="https://wa.me/31623560581"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center justify-center gap-2 w-full py-3.5 rounded-xl font-semibold text-sm"

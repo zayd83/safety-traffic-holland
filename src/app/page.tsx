@@ -7,7 +7,6 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { ContainerScroll, BentoGrid, BentoCell, ContainerScale } from "@/components/blocks/hero-gallery-scroll-animation";
 import CarouselCard from "@/components/ui/carousel-card-1";
-import { InfiniteSlider } from "@/components/ui/infinite-slider";
 import { motion } from "framer-motion";
 import {
   IconShield, IconUsers, IconMap, IconClock,
@@ -84,42 +83,6 @@ const projectCards = [
   { id: 5, imgUrl: "/images/A7401975.jpg", content: "Bouwplaatsbegeleiding Schiphol — Langdurig project met dagelijkse verkeersregelaars voor bouwverkeer en veiligheid rondom uitbreiding luchthaven." },
 ];
 
-const clients = [
-  { name: "Rijkswaterstaat",    logo: "/images/logos/rijkswaterstaat.svg" },
-  { name: "ProRail",            logo: "/images/logos/prorail.svg" },
-  { name: "BAM Infra",          logo: "/images/logos/bam.svg" },
-  { name: "Heijmans N.V.",      logo: "/images/logos/heijmans.svg" },
-  { name: "Gemeente Rotterdam", logo: "/images/logos/rotterdam.svg" },
-  { name: "Gemeente Amsterdam", logo: "/images/logos/amsterdam.svg" },
-  { name: "Boskalis",           logo: "/images/logos/boskalis.svg" },
-  { name: "VolkerWessels",      logo: "/images/logos/volkerwessels.svg" },
-  { name: "DURA Vermeer",       logo: "/images/logos/duravermeer.svg" },
-  { name: "TBI Infra",          logo: "/images/logos/tbi.svg" },
-  { name: "Sweco Nederland",    logo: "/images/logos/sweco.svg" },
-  { name: "Arcadis",            logo: "/images/logos/arcadis.svg" },
-];
-
-// ─── ClientLogoCard ───────────────────────────────────────────────────────────
-
-function ClientLogoCard({ name, logo }: { name: string; logo: string }) {
-  const [hovered, setHovered] = useState(false);
-  const [hasError, setHasError] = useState(false);
-  return (
-    <div
-      className="flex items-center justify-center px-6 bg-white border shrink-0 rounded-xl"
-      style={{ height: "60px", minWidth: "130px", borderColor: "rgba(27,111,190,0.12)", boxShadow: "0 2px 8px rgba(27,111,190,0.06)" }}
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
-    >
-      {hasError ? (
-        <span className="text-xs font-semibold whitespace-nowrap px-1 text-center" style={{ color: "#1A1A2E" }}>{name}</span>
-      ) : (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img src={logo} alt={name} style={{ height: "38px", width: "auto", maxWidth: "140px", objectFit: "contain", filter: hovered ? "grayscale(0%) opacity(1)" : "grayscale(100%) opacity(0.5)", transition: "filter 0.35s ease" }} onError={() => setHasError(true)} />
-      )}
-    </div>
-  );
-}
 
 // ─── Page ─────────────────────────────────────────────────────────────────────
 
@@ -188,20 +151,6 @@ export default function Home() {
 
         {/* All sections below hero — own stacking context above hero z-index */}
         <div style={{ position: "relative", zIndex: 10, backgroundColor: "#ffffff" }}>
-
-        {/* ── CLIENT SLIDER ── */}
-        <section className="py-8 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-5">
-            <p className="text-center text-xs font-semibold uppercase tracking-widest" style={{ color: "#1B6FBE" }}>
-              Vertrouwd door toonaangevende opdrachtgevers
-            </p>
-          </div>
-          <InfiniteSlider gap={28} duration={35} durationOnHover={80} className="w-full">
-            {clients.map((client) => (
-              <ClientLogoCard key={client.name} name={client.name} logo={client.logo} />
-            ))}
-          </InfiniteSlider>
-        </section>
 
         {/* ── DIENSTEN ── */}
         <section id="diensten" className="py-20 md:py-28 bg-white">
@@ -401,7 +350,7 @@ export default function Home() {
                   <Link href="/contact" className="inline-flex items-center justify-center px-5 py-3 rounded-xl text-sm font-semibold transition-[opacity,transform] hover:opacity-90 active:translate-y-px focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-400" style={{ backgroundColor: "#F5A623", color: "#1A1A2E" }}>
                     Offerte aanvragen
                   </Link>
-                  <a href="tel:+31641039393" className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-sm font-semibold text-white border border-white/25 hover:bg-white/10 active:translate-y-px focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50">
+                  <a href="tel:+31623560581" className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-sm font-semibold text-white border border-white/25 hover:bg-white/10 active:translate-y-px focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50">
                     <IconPhone className="w-4 h-4" />
                     Bel ons
                   </a>

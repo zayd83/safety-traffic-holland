@@ -391,8 +391,8 @@ export default function VacaturesPage() {
               Neem contact op
             </Link>{" "}
             of bel{" "}
-            <a href="tel:+31641039393" style={{ color: "#1B6FBE", fontWeight: 600, textDecoration: "none" }}>
-              +31 6 41 03 93 93
+            <a href="tel:+31623560581" style={{ color: "#1B6FBE", fontWeight: 600, textDecoration: "none" }}>
+              +31 6 23 56 05 81
             </a>
           </p>
         </div>
