@@ -196,10 +196,6 @@ export default function Home() {
                 <h2 className="text-3xl sm:text-4xl font-extrabold mb-4" style={{ color: "#1A1A2E", letterSpacing: "-0.02em" }}>Uw partner voor veilige verkeersafhandeling</h2>
                 <p className="text-base text-gray-500 mb-6" style={{ lineHeight: "1.75" }}>Wij combineren vakkennis, certificering en persoonlijke service voor het beste resultaat.</p>
               </div>
-              <div className="relative w-full lg:w-[420px] h-72 lg:h-80 rounded-2xl overflow-hidden shrink-0" style={{ boxShadow: "0 8px 32px rgba(27,111,190,0.15)" }}>
-                <Image src="/images/A7401959.jpg" alt="Verkeersregelaar aan het werk" fill loading="eager" className="object-cover" sizes="(max-width: 1024px) 100vw, 420px" />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A2E]/50 to-transparent" />
-              </div>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {usps.map((u) => (
