@@ -37,7 +37,6 @@ const diensten = [
 ];
 
 const usps = [
-  { icon: <IconShield className="w-7 h-7" />, title: "VCA-gecertificeerd", desc: "Onze verkeersregelaars zijn volledig VCA-gecertificeerd en werken volgens de geldende veiligheidsnormen." },
   { icon: <IconUsers className="w-7 h-7" />, title: "Vaste verkeersregelaars", desc: "U werkt altijd met ervaren, vaste medewerkers die de procedures kennen en professioneel optreden." },
   { icon: <IconMap className="w-7 h-7" />, title: "Heel Nederland", desc: "Wij zijn actief in het hele land en kunnen snel worden ingezet, van de Randstad tot de regio's." },
   { icon: <IconClock className="w-7 h-7" />, title: "24/7 bereikbaar", desc: "Ook buiten reguliere werktijden staan wij klaar voor vragen, planning en spoedinzetten." },
@@ -118,17 +117,13 @@ export default function Home() {
           </div>
 
           <ContainerScale className="z-20 text-center" style={{ width: "min(92vw, 700px)" }}>
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold mb-5 border border-white/20" style={{ backgroundColor: "rgba(27,111,190,0.25)", color: "#93c5fd" }}>
-              <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse shrink-0" />
-              VCA-gecertificeerd · 24/7 beschikbaar
-            </div>
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-5" style={{ letterSpacing: "-0.03em", textShadow: "0 2px 20px rgba(0,0,0,0.5)" }}>
               Professionele<br />
               <span style={{ color: "#F5A623" }}>verkeers&shy;begeleiding.</span><br />
               Veilig. Vlot. Betrouwbaar.
             </h1>
             <p className="text-sm sm:text-base lg:text-lg text-white/75 mb-7 mx-auto" style={{ lineHeight: "1.75", maxWidth: "520px", textShadow: "0 1px 8px rgba(0,0,0,0.4)" }}>
-              Wij begeleiden verkeer bij werkzaamheden, evenementen en calamiteiten — door heel Nederland. Met vaste, VCA-gecertificeerde verkeersregelaars altijd op de juiste plek.
+              Wij begeleiden verkeer bij werkzaamheden, evenementen en calamiteiten — door heel Nederland. Met vaste verkeersregelaars altijd op de juiste plek.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center mb-8">
               <Link href="/contact" className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl font-semibold text-sm hover:opacity-90 active:translate-y-px focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-yellow-400" style={{ backgroundColor: "#F5A623", color: "#1A1A2E" }}>
@@ -139,7 +134,7 @@ export default function Home() {
               </Link>
             </div>
             <div className="border-t border-white/15 pt-5 flex flex-wrap items-center justify-center gap-5 md:gap-10">
-              {["VCA-gecertificeerd", "Vaste verkeersregelaars", "Heel Nederland"].map((item) => (
+              {["Vaste verkeersregelaars", "Midden en Zuid-West Nederland"].map((item) => (
                 <div key={item} className="flex items-center gap-2 text-xs sm:text-sm text-white/70 font-medium">
                   <IconCheck className="w-4 h-4 shrink-0" style={{ color: "#F5A623" }} />
                   {item}
@@ -200,12 +195,6 @@ export default function Home() {
                 <div className="inline-block px-3 py-1 rounded-full text-xs font-semibold mb-3 text-white" style={{ backgroundColor: "#1B6FBE" }}>Waarom Safety Traffic Holland</div>
                 <h2 className="text-3xl sm:text-4xl font-extrabold mb-4" style={{ color: "#1A1A2E", letterSpacing: "-0.02em" }}>Uw partner voor veilige verkeersafhandeling</h2>
                 <p className="text-base text-gray-500 mb-6" style={{ lineHeight: "1.75" }}>Wij combineren vakkennis, certificering en persoonlijke service voor het beste resultaat.</p>
-                <div className="flex items-center gap-4">
-                  <div className="relative w-24 h-14 shrink-0 rounded-xl overflow-hidden bg-white border border-gray-100 p-1" style={{ boxShadow: "0 2px 8px rgba(0,0,0,0.06)" }}>
-                    <Image src="/images/vca.png" alt="VCA-gecertificeerd" fill loading="eager" className="object-contain p-1" sizes="96px" />
-                  </div>
-                  <p className="text-sm text-gray-500" style={{ lineHeight: "1.7" }}>VCA-gecertificeerd bedrijf. Al onze verkeersregelaars voldoen aan de landelijk geldende veiligheidsnormen.</p>
-                </div>
               </div>
               <div className="relative w-full lg:w-[420px] h-72 lg:h-80 rounded-2xl overflow-hidden shrink-0" style={{ boxShadow: "0 8px 32px rgba(27,111,190,0.15)" }}>
                 <Image src="/images/A7401959.jpg" alt="Verkeersregelaar aan het werk" fill loading="eager" className="object-cover" sizes="(max-width: 1024px) 100vw, 420px" />

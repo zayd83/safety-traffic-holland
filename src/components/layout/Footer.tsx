@@ -31,7 +31,7 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-sm mb-5" style={{ color: "rgba(255,255,255,0.55)", lineHeight: "1.7" }}>
-              Professionele verkeersbegeleiding door heel Nederland. VCA-gecertificeerd en 24/7 bereikbaar.
+              Professionele verkeersbegeleiding door heel Nederland. 24/7 bereikbaar.
             </p>
             <a
               href="https://wa.me/31623560581"

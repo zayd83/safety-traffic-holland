@@ -73,6 +73,7 @@ export default function VacaturesPage() {
     hoeGevonden: "Selecteer een optie",
   });
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
 
   const validate = () => {
@@ -84,7 +85,7 @@ export default function VacaturesPage() {
     return e;
   };
 
-  const handleSubmit = (ev: React.FormEvent) => {
+  const handleSubmit = async (ev: React.FormEvent) => {
     ev.preventDefault();
     const e = validate();
     if (Object.keys(e).length > 0) {
@@ -92,6 +93,24 @@ export default function VacaturesPage() {
       return;
     }
     setErrors({});
+    setSending(true);
+    try {
+      await fetch("https://formsubmit.co/ajax/info@safetytrafficholland.nl", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          naam: form.naam,
+          email: form.email,
+          telefoon: form.telefoon,
+          motivatie: form.motivatie,
+          hoe_gevonden: form.hoeGevonden,
+          _subject: "Open sollicitatie via Safety Traffic Holland website",
+        }),
+      });
+    } catch {
+      // submit anyway — formsubmit delivers even if response fails
+    }
+    setSending(false);
     setSubmitted(true);
   };
 
@@ -361,17 +380,20 @@ export default function VacaturesPage() {
 
                       <button
                         type="submit"
+                        disabled={sending}
                         className="w-full py-3.5 rounded-xl font-semibold text-sm"
                         style={{
                           backgroundColor: "#F5A623",
                           color: "#1A1A2E",
+                          opacity: sending ? 0.7 : 1,
                           transition: "opacity 0.2s ease, transform 0.2s ease",
+                          cursor: sending ? "not-allowed" : "pointer",
                         }}
-                        onMouseEnter={(e) => { e.currentTarget.style.opacity = "0.9"; e.currentTarget.style.transform = "translateY(-1px)"; }}
-                        onMouseLeave={(e) => { e.currentTarget.style.opacity = "1"; e.currentTarget.style.transform = "translateY(0)"; }}
+                        onMouseEnter={(e) => { if (!sending) { e.currentTarget.style.opacity = "0.9"; e.currentTarget.style.transform = "translateY(-1px)"; } }}
+                        onMouseLeave={(e) => { e.currentTarget.style.opacity = sending ? "0.7" : "1"; e.currentTarget.style.transform = "translateY(0)"; }}
                         onMouseDown={(e) => { e.currentTarget.style.transform = "translateY(0)"; }}
                       >
-                        Verstuur sollicitatie
+                        {sending ? "Versturen…" : "Verstuur sollicitatie"}
                       </button>
                     </form>
                   </>

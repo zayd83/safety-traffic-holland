@@ -64,7 +64,7 @@ export default function AlgemeneVoorwaardenPage() {
 
               <h2 style={{ color: "#1A1A2E", fontSize: "1.25rem", fontWeight: 700, marginTop: "2rem", marginBottom: "0.75rem" }}>4. Uitvoering van de dienst</h2>
               <p>
-                Safety Traffic Holland B.V. voert de opdracht naar beste inzicht en vermogen uit. Onze verkeersregelaars zijn VCA-gecertificeerd en werken conform de geldende wet- en regelgeving. Wij behouden het recht de opdracht te weigeren of te annuleren indien de veiligheid van medewerkers of derden in gevaar is.
+                Safety Traffic Holland B.V. voert de opdracht naar beste inzicht en vermogen uit. Onze verkeersregelaars werken conform de geldende wet- en regelgeving. Wij behouden het recht de opdracht te weigeren of te annuleren indien de veiligheid van medewerkers of derden in gevaar is.
               </p>
 
               <h2 style={{ color: "#1A1A2E", fontSize: "1.25rem", fontWeight: 700, marginTop: "2rem", marginBottom: "0.75rem" }}>5. Annulering</h2>

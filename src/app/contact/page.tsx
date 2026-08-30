@@ -49,7 +49,7 @@ const contactInfo = [
   {
     icon: <IconClock className="w-5 h-5" />,
     label: "Bereikbaarheid",
-    value: "24 uur per dag, 7 dagen per week",
+    value: "Maandag t/m vrijdag 08:00 - 17:00",
     href: null,
     color: "#1B6FBE",
     bg: "rgba(27,111,190,0.12)",
@@ -85,6 +85,7 @@ export default function ContactPage() {
     bericht: "",
   });
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
 
   const validate = () => {
@@ -96,7 +97,7 @@ export default function ContactPage() {
     return e;
   };
 
-  const handleSubmit = (ev: React.FormEvent) => {
+  const handleSubmit = async (ev: React.FormEvent) => {
     ev.preventDefault();
     const e = validate();
     if (Object.keys(e).length > 0) {
@@ -104,6 +105,25 @@ export default function ContactPage() {
       return;
     }
     setErrors({});
+    setSending(true);
+    try {
+      await fetch("https://formsubmit.co/ajax/info@safetytrafficholland.nl", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          naam: form.naam,
+          bedrijf: form.bedrijf,
+          email: form.email,
+          telefoon: form.telefoon,
+          type_aanvraag: form.type,
+          bericht: form.bericht,
+          _subject: "Nieuw bericht via Safety Traffic Holland website",
+        }),
+      });
+    } catch {
+      // submit anyway — formsubmit delivers even if response fails
+    }
+    setSending(false);
     setSubmitted(true);
   };
 
@@ -152,8 +172,7 @@ export default function ContactPage() {
             className="text-white font-bold mb-4"
             style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", letterSpacing: "-0.03em", lineHeight: 1.1 }}
           >
-            Neem contact op<br />
-            <span style={{ color: "#F5A623" }}>we reageren binnen 4 uur</span>
+            Neem contact op
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -414,17 +433,20 @@ export default function ContactPage() {
 
                         <button
                           type="submit"
+                          disabled={sending}
                           className="w-full py-3.5 rounded-xl font-semibold text-sm"
                           style={{
                             backgroundColor: "#1B6FBE",
                             color: "#ffffff",
+                            opacity: sending ? 0.7 : 1,
                             transition: "opacity 0.2s ease, transform 0.2s ease",
+                            cursor: sending ? "not-allowed" : "pointer",
                           }}
-                          onMouseEnter={(e) => { e.currentTarget.style.opacity = "0.9"; e.currentTarget.style.transform = "translateY(-1px)"; }}
-                          onMouseLeave={(e) => { e.currentTarget.style.opacity = "1"; e.currentTarget.style.transform = "translateY(0)"; }}
+                          onMouseEnter={(e) => { if (!sending) { e.currentTarget.style.opacity = "0.9"; e.currentTarget.style.transform = "translateY(-1px)"; } }}
+                          onMouseLeave={(e) => { e.currentTarget.style.opacity = sending ? "0.7" : "1"; e.currentTarget.style.transform = "translateY(0)"; }}
                           onMouseDown={(e) => { e.currentTarget.style.transform = "translateY(0)"; }}
                         >
-                          Verstuur bericht
+                          {sending ? "Versturen…" : "Verstuur bericht"}
                         </button>
                       </form>
                     </>

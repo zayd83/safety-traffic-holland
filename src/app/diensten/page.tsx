@@ -5,7 +5,7 @@ import Image from "next/image";
 import { motion, type Variants } from "framer-motion";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import { IconShield, IconCheck, IconArrowRight } from "@/components/ui/icons";
+import { IconCheck, IconArrowRight } from "@/components/ui/icons";
 
 const diensten = [
   {
@@ -14,11 +14,9 @@ const diensten = [
     subtitle: "Veilige doorstroming tijdens infrastructuurprojecten",
     img: "/images/A7401932.jpg",
     imgAlt: "Verkeersbegeleiding bij wegwerkzaamheden",
-    desc: "Of het nu gaat om asfaltering, rioolwerkzaamheden, kabels en leidingen, of groot onderhoud — veilige verkeersbegeleiding is essentieel. Onze VCA-gecertificeerde verkeersregelaars zorgen voor een vlotte en veilige doorstroming, zodat zowel werknemers als weggebruikers beschermd zijn.",
+    desc: "Of het nu gaat om asfaltering, rioolwerkzaamheden, kabels en leidingen, of groot onderhoud — veilige verkeersbegeleiding is essentieel. Onze verkeersregelaars zorgen voor een vlotte en veilige doorstroming, zodat zowel werknemers als weggebruikers beschermd zijn.",
     features: [
-      "VCA-gecertificeerde verkeersregelaars",
       "Vaste en representatieve verkeersregelaars",
-      "Snelle inzet bij geplande werkzaamheden en calamiteiten",
       "Flexibele inzet, ook buiten reguliere werktijden",
       "Regionale dekking in Zeeland, Noord-Brabant, Zuid-Holland, Noord-Holland, Utrecht, Flevoland en Gelderland",
       "Veiligheid, kwaliteit en betrouwbaarheid voorop",
@@ -31,13 +29,12 @@ const diensten = [
     subtitle: "Veilig en vlot in- en uitstromen",
     img: "/images/A7401967.jpg",
     imgAlt: "Verkeersbegeleiding bij evenementen",
-    desc: "Grote evenementen brengen veel verkeersbewegingen met zich mee. Safety Traffic Holland regelt de verkeersstroom vóór, tijdens en na uw evenement. Van festivals en sportwedstrijden tot braderieën en beurzen — wij zorgen dat bezoekers veilig arriveren en vertrekken.",
+    desc: "Een goede verkeersorganisatie is essentieel voor een veilig en succesvol evenement. Safety Traffic Holland begeleidt het verkeer vóór, tijdens en na uw evenement. Van festivals en sportwedstrijden tot braderieën en beurzen zorgen wij voor een veilige en efficiënte doorstroming van bezoekers en verkeer.",
     features: [
       "Verkeersplan op maat",
-      "Parkeerregulering en bezoekersleiding",
-      "Afstemming met gemeente en politie",
-      "Inzet van meerdere verkeersregelaars tegelijk",
-      "Flexibel inzetbaar bij last-minute wijzigingen",
+      "Parkeerregulering en bezoekersbegeleiding",
+      "Veilige doorstroming van verkeer",
+      "Professionele en representatieve verkeersregelaars",
     ],
     flip: true,
   },
@@ -47,7 +44,7 @@ const diensten = [
     subtitle: "24/7 beschikbaar wanneer het erop aankomt",
     img: "/images/A7401998.jpg",
     imgAlt: "Calamiteitenbegeleiding",
-    desc: "Bij onverwachte situaties zoals ongevallen, wateroverlast, gaslekkages of andere calamiteiten is snel handelen essentieel. Safety Traffic Holland is 24 uur per dag, 7 dagen per week bereikbaar voor spoedopdrachten en kan op korte termijn verkeersregelaars inzetten om de situatie veilig en beheersbaar te houden.",
+    desc: "Bij onverwachte situaties zoals ongevallen, wateroverlast, gaslekkages of andere calamiteiten is snel handelen essentieel. Safety Traffic Holland is Maandag t/m vrijdag 08:00 - 17:00 bereikbaar voor spoedopdrachten en kan op korte termijn verkeersregelaars inzetten om de situatie veilig en beheersbaar te houden.",
     features: [
       "24/7 bereikbaar via telefoon en WhatsApp",
       "Snelle inzet bij calamiteiten en spoedopdrachten",
@@ -244,15 +241,11 @@ export default function DienstenPage() {
             style={{ backgroundColor: "rgba(27,111,190,0.12)", border: "1px solid rgba(27,111,190,0.2)" }}
           >
             <div>
-              <div className="flex items-center gap-3 mb-2">
-                <IconShield className="w-5 h-5" style={{ color: "#F5A623" }} />
-                <span style={{ color: "#F5A623", fontWeight: 700, fontSize: "0.875rem", textTransform: "uppercase", letterSpacing: "0.1em" }}>VCA-gecertificeerd</span>
-              </div>
               <h3 className="text-white font-bold text-xl md:text-2xl mb-2" style={{ letterSpacing: "-0.02em" }}>
                 Klaar voor uw volgende project?
               </h3>
               <p style={{ color: "rgba(255,255,255,0.6)", fontSize: "0.9375rem" }}>
-                Vraag een vrijblijvende offerte aan. We reageren binnen 4 uur.
+                Vraag een vrijblijvende offerte aan.
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-3 shrink-0">

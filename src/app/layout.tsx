@@ -11,7 +11,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Safety Traffic Holland B.V. — Professionele Verkeersbegeleiding",
   description:
-    "Safety Traffic Holland verzorgt professionele verkeersbegeleiding voor werkzaamheden, evenementen en calamiteiten door heel Nederland. VCA-gecertificeerd.",
+    "Safety Traffic Holland verzorgt professionele verkeersbegeleiding voor werkzaamheden, evenementen en calamiteiten door heel Nederland.",
 };
 
 export default function RootLayout({

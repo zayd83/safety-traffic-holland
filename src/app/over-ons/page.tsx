@@ -17,7 +17,7 @@ const waarden = [
   {
     icon: <IconShield className="w-6 h-6" />,
     title: "Veiligheid eerst",
-    desc: "Elk project start met een veiligheidsanalyse. Onze medewerkers zijn VCA-gecertificeerd en handelen altijd conform de geldende wet- en regelgeving.",
+    desc: "Elk project start met een veiligheidsanalyse. Onze medewerkers handelen altijd conform de geldende wet- en regelgeving.",
   },
   {
     icon: <IconCheck className="w-6 h-6" />,
@@ -37,10 +37,10 @@ const waarden = [
 ];
 
 const werkwijzeSteps = [
-  { num: "01", title: "Aanvraag", desc: "U neemt contact op via telefoon, WhatsApp of het contactformulier. We reageren binnen 4 uur op uw aanvraag." },
+  { num: "01", title: "Aanvraag", desc: "U neemt contact op via telefoon, WhatsApp of het contactformulier." },
   { num: "02", title: "Inventarisatie", desc: "We bespreken de locatie, het tijdstip, de duur en eventuele bijzonderheden. Zo kunnen we een passende oplossing voorstellen." },
   { num: "03", title: "Offerte", desc: "U ontvangt een heldere offerte met een vaste prijs per dag of per uur. Geen verborgen kosten." },
-  { num: "04", title: "Uitvoering", desc: "Op de afgesproken dag staan onze VCA-gecertificeerde verkeersregelaars klaar. U kunt ons altijd bereiken voor updates." },
+  { num: "04", title: "Uitvoering", desc: "Op de afgesproken dag staan onze verkeersregelaars klaar. U kunt ons altijd bereiken voor updates." },
 ];
 
 const fadeUp: Variants = {
@@ -103,7 +103,7 @@ export default function OverOnsPage() {
             className="max-w-2xl"
             style={{ color: "rgba(255,255,255,0.65)", fontSize: "1.125rem", lineHeight: 1.7 }}
           >
-            Professionele verkeersbegeleiding door heel Nederland. VCA-gecertificeerd, betrouwbaar en 24/7 bereikbaar voor uw project.
+            Professionele verkeersbegeleiding door heel Nederland. Betrouwbaar en 24/7 bereikbaar voor uw project.
           </motion.p>
         </div>
       </section>
@@ -165,22 +165,6 @@ export default function OverOnsPage() {
                   className="absolute inset-0"
                   style={{ background: "linear-gradient(to top, rgba(26,26,46,0.5) 0%, transparent 50%)" }}
                 />
-              </div>
-              {/* VCA badge */}
-              <div
-                className="absolute -bottom-6 -left-6 rounded-xl px-5 py-4 flex items-center gap-3"
-                style={{ backgroundColor: "#1A1A2E", boxShadow: "0 8px 32px rgba(0,0,0,0.25)" }}
-              >
-                <div
-                  className="w-10 h-10 rounded-lg flex items-center justify-center shrink-0"
-                  style={{ backgroundColor: "rgba(27,111,190,0.2)" }}
-                >
-                  <IconShield className="w-5 h-5" style={{ color: "#1B6FBE" }} />
-                </div>
-                <div>
-                  <p className="text-white font-bold text-sm leading-tight">VCA-gecertificeerd</p>
-                  <p style={{ color: "rgba(255,255,255,0.5)", fontSize: "0.75rem" }}>Alle medewerkers</p>
-                </div>
               </div>
             </motion.div>
           </div>

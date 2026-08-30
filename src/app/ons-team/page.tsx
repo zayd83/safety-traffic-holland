@@ -17,7 +17,7 @@ const teamMembers = [
     quote:
       "Ik heb Safety Traffic Holland opgericht omdat ik geloofde dat verkeersbegeleiding anders kon — persoonlijker, betrouwbaarder en met echte aandacht voor de mensen in het veld.",
     story:
-      "Redouane begon Safety Traffic Holland vanuit een duidelijke visie: een bedrijf bouwen waar kwaliteit en menselijkheid centraal staan. Wat klein begon groeide uit tot een landelijk opererende organisatie met een vast team van VCA-gecertificeerde verkeersregelaars. Hij is dagelijks betrokken bij de operatie en kent zijn mensen persoonlijk.",
+      "Redouane begon Safety Traffic Holland vanuit een duidelijke visie: een bedrijf bouwen waar kwaliteit en menselijkheid centraal staan. Wat klein begon groeide uit tot een landelijk opererende organisatie met een vast team van ervaren verkeersregelaars. Hij is dagelijks betrokken bij de operatie en kent zijn mensen persoonlijk.",
     highlight:
       "Het succes van STH zit in de mensen. Als je goed zorgt voor je team, zorgt je team goed voor de klant — zo simpel is het.",
   },
@@ -197,7 +197,7 @@ export default function OnsTeamPage() {
                 style={{ backgroundColor: "rgba(27,111,190,0.2)", color: "#93c5fd" }}
               >
                 <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse shrink-0" />
-                Ons team · VCA-gecertificeerd
+                Ons team
               </div>
 
               <h1
